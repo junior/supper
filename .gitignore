@@ -1,0 +1,16 @@
+
+### macOS ###
+*.DS_Store
+# Thumbnails
+._*
+
+### Node ###
+# Dependency directories
+node_modules/
+
+### Code ###
+# Visual Studio Code - https://code.visualstudio.com/
+.settings/
+.vscode/
+tsconfig.json
+jsconfig.json
