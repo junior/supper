@@ -1,0 +1,101 @@
+
+Supper can be used to restart programs when a *.js file changes.
+Also used to restart programs when they crash.
+
+Usage:
+  supper [options] <program.js>
+  supper [options] -- <program.js> [args ...]
+
+Required:
+  <program>
+    The program to run.
+
+Options:
+  -w|--watch <watchItems>
+    A comma-delimited list of folders or js files to watch for changes.
+    When a change to a js file occurs, reload the program
+    Default is '.'
+
+  -i|--ignore <ignoreItems>
+    A comma-delimited list of folders to ignore for changes.
+    No default
+
+  --ignore-symlinks
+    Enable symbolic links ignoring when looking for files to watch.
+
+  -p|--poll-interval <milliseconds>
+    How often to poll watched files for changes.
+    Defaults to Node default.
+
+  -e|--extensions <extensions>
+    Specific file extensions to watch in addition to defaults.
+    Used when --watch option includes folders
+    Default is 'node,js'
+
+  -x|--exec <executable>
+    The executable that runs the specified program.
+    Default is 'node'
+
+  --debug[=port]
+    * Legacy debugger has been deprecated as of Node 7.7.0.
+    * Please use --inspect and Inspector instead.
+    Start node with --debug[=port] flag. 
+
+  --debug-brk[=port]
+    * Legacy debugger has been deprecated as of Node 7.7.0.
+    * Please use --inspect and Inspector instead.
+    Start node with --debug-brk[=port] flag.
+
+  --harmony
+    Start node with --harmony flag.
+
+  --inspect[=port]
+    Start node with --inspect[=port] flag. 
+
+  --inspect-brk[=port]
+    Start node with --debug-brk[=port] flag.
+
+  --harmony_default_parameters
+    Start node with --harmony_default_parameters flag.
+
+  -n|--no-restart-on error|exit
+    Don't automatically restart the supervised program if it ends.
+    Supper will wait for a change in the source files.
+    If "error", an exit code of 0 will still restart.
+    If "exit", no restart regardless of exit code.
+    If "success", no restart only if exit code is 0.
+
+  -t|--non-interactive
+    Disable interactive capacity.
+    With this option, supper won't listen to stdin.
+
+  -k|--instant-kill
+    use SIGKILL (-9) to terminate instead of the more gentle SIGTERM.
+
+  --force-watch
+    Use fs.watch instead of fs.watchFile.
+    This may be useful if you see a high cpu load on a windows machine.
+
+  -s|--timestamp
+    Log timestamp after each run.
+    Make it easy to tell when the task last ran.
+
+  -h|--help|-?
+    Display these usage instructions.
+
+  -q|--quiet
+    Suppress DEBUG messages
+
+  -V|--verbose
+    Show extra DEBUG messages
+
+Options available after start:
+rs - restart process.
+     Useful for restarting supper eaven if no file has changed.
+
+Examples:
+  supper myapp.js
+  supper myapp.coffee
+  supper -w scripts -e myext -x myrunner myapp
+  supper -- server.js -h host -p port
+

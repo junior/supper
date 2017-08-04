@@ -1,0 +1,40 @@
+{
+  "name": "supper",
+  "version": "0.0.3",
+  "description": "Yet another supervisor program for running nodejs programs",
+  "keywords": [
+    "supervisor",
+    "autoload",
+    "reload",
+    "live",
+    "reloading",
+    "hot-reload",
+    "restart",
+    "inspect"
+  ],
+  "homepage": "https://github.com/junior/supper",
+  "author": {
+    "name": "Adao Junior",
+    "url": "http://github.com/junior"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:junior/supper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/junior/supper/issues"
+  },
+  "main": "./lib/supper.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "bin": {
+    "supper": "./bin/supper-cli.js"
+  },
+  "scripts": {
+    "test": "node test/basic.test.js"
+  },
+  "license": "MIT",
+  "preferGlobal": true,
+  "devDependencies": {}
+}
