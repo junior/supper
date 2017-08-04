@@ -1,6 +1,6 @@
 
-Node Supper is used to restart programs when they crash.
-It can also be used to restart programs when a *.js file changes.
+Supper can be used to restart programs when a *.js file changes.
+Also used to restart programs when they crash.
 
 Usage:
   supper [options] <program.js>
