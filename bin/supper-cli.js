@@ -6,7 +6,7 @@ const path = require('path'),
 let arg, base;
 do arg = args.shift();
 while (fs.realpathSync(arg) !== __filename
-  && !(base = path.basename(arg)).match(/^supper$|^supper.js$/)
+  && !(path.basename(arg)).match(/^supper$|^supper.js$/)
 );
 
 require('../lib/supper').run(args);
