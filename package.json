@@ -32,6 +32,7 @@
     "supper": "./bin/supper-cli.js"
   },
   "scripts": {
+    "lint": "eslint lib/*.js bin/*.js",
     "test": "node test/basic.test.js"
   },
   "license": "MIT",
