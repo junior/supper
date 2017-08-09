@@ -1,6 +1,6 @@
 {
   "name": "supper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yet another supervisor program for running nodejs programs",
   "keywords": [
     "supervisor",
